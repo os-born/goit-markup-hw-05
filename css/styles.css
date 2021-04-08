@@ -180,6 +180,21 @@ ul {
   margin-right: 0;
 }
 
+.link {
+  position: relative;
+}
+
+.nav-point.active-line::after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 .contacts-header-items .link {
   margin-right: 50px;
   padding-top: 28px;
