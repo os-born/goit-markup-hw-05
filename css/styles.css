@@ -57,10 +57,6 @@ ul {
   justify-content: flex-start;
 }
 
-.no-line {
-  text-decoration: none;
-}
-
 .no-line a {
   text-decoration: none;
 }
@@ -283,33 +279,6 @@ ul {
   border: none;
   border-radius: 4px;
 }
-/* 
-.advantages-item::before {
-  content: '';
-  display: block;
-  max-width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--team-background-color);
-  border-radius: 4px;
-} */
-/* .advantages-item.icon-detail::before {
-  background-image: url(../images/antenna1.svg);
-}
-
-.advantages-item.icon-time::before {
-  background-image: url(../images/clock\ 1.svg);
-}
-
-.advantages-item.icon-planining::before {
-  background-image: url(../images/diagram\ 1.svg);
-}
-
-.advantages-item.icon-technologies::before {
-  background-image: url(../images/astronaut\ 1.svg);
-} */
 
 .advantages-item-title {
   margin-bottom: 12px;
@@ -643,13 +612,13 @@ ul {
   display: block;
 }
 
-.thumb {
+.card-thumb {
   position: relative;
   display: block;
   overflow: hidden;
 }
 
-.thumb::before {
+.card-thumb::before {
   position: absolute;
   content: '';
   display: inline-block;
@@ -662,7 +631,7 @@ ul {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.thumb:hover.thumb::before {
+.card-thumb:hover.card-thumb::before {
   transform: translateY(0);
 }
 
@@ -684,16 +653,9 @@ ul {
   color: var(--primary-white-color);
 }
 
-.thumb:hover .hover-overlay {
+.card-thumb:hover .hover-overlay {
   transform: translateY(0);
 }
-/* 
-.hover-overlay::before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background-color: yellowgreen;
-} */
 
 .card-border {
   padding: 20px 24px;
