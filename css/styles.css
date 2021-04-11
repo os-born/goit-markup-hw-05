@@ -14,6 +14,7 @@ body {
   --hero-background-color: #2f303a;
   --team-background-color: #f5f4fa;
   --clients-text-color: #afb1b8;
+  --animation-var: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -123,13 +124,13 @@ ul {
   fill: currentColor;
 }
 
-.contact-link-list:not(:last-child) {
-  margin-right: 30px;
+.contact-link-list + .contact-link-list {
+  margin-left: 30px;
 }
 
 .contact-link {
   display: flex;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var);
   height: 16px;
   justify-content: center;
   align-items: center;
@@ -146,7 +147,7 @@ ul {
 }
 
 .site-nav a {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -158,7 +159,7 @@ ul {
 
 .nav-point:hover,
 .nav-point:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var);
   color: #2196f3;
 }
 
@@ -278,40 +279,32 @@ ul {
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation-var);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--primary-white-color);
 }
 
-.modal-text {
-  position: relative;
+.modal-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  top: 8px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+}
+
+.modal-button-logo {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-left: 15px;
-  padding-right: 15px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-indent: 30px;
-  text-transform: uppercase;
-}
-
-.modal-button {
-  position: absolute;
-  display: flex;
-  width: 30px;
-  height: 30px;
-  right: 15px;
-  top: 15px;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .advantages-section {
@@ -477,8 +470,7 @@ ul {
   height: 44px;
   align-items: center;
   justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var), background-color var(--animation-var);
   border-radius: 50%;
   cursor: pointer;
   color: #afb1b8;
@@ -515,8 +507,7 @@ ul {
   height: 90px;
   justify-content: center;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var), border var(--animation-var);
   cursor: pointer;
   border: 1px solid var(--clients-text-color);
   border-radius: 4px;
@@ -551,7 +542,7 @@ ul {
 }
 
 .contacts-footer a {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation-var);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -596,7 +587,7 @@ ul {
   height: 44px;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation-var);
   cursor: pointer;
   border-radius: 50%;
   color: var(--primary-white-color);
@@ -613,8 +604,7 @@ ul {
 /* Portfolio-page-css */
 
 .filter-button {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation-var), color var(--animation-var);
   padding: 6px 22px;
   text-align: center;
   font: inherit;
@@ -654,7 +644,7 @@ ul {
 .portfolio-card-item {
   margin-left: 30px;
   margin-bottom: 30px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animation-var);
 }
 
 .portfolio-card-item:hover,
@@ -690,7 +680,7 @@ ul {
   left: 0;
   bottom: 0;
   transform: translateY(calc(100%));
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation-var);
   background-color: rgba(33, 150, 243, 0.9);
 }
 
@@ -706,7 +696,7 @@ ul {
   left: 0;
   bottom: 0;
   transform: translateY(calc(100%));
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation-var);
   text-align: left;
   padding: 63px 24px;
   font-weight: 400;
